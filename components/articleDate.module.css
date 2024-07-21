@@ -1,0 +1,18 @@
+.time {
+  display: inline-block;
+  letter-spacing: 0.12em;
+}
+
+@media screen and (max-width: 720px) {
+  .time {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .time {
+    font-size: 0.7rem;
+  }
+}
