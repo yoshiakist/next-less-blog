@@ -10,7 +10,7 @@ yossi が自分のブログ開発のために利用しています。
 
 ## Installation
 
-### Environment
+### step 1. Environment
 
 - node: v22.3.0
 - npm: v10.8.1
@@ -18,13 +18,13 @@ yossi が自分のブログ開発のために利用しています。
 
 ※ JavaScript パッケージマネージャの Volta をインストールしてある場合は自動で設定されます
 
-### Setup Newt
+### step 2. Setup Newt
 
 - Newt にアカウントを作成する
 - デフォルトのブログテンプレートを利用してスペースを作成する
 - `スペースUID` と `CDN API トークン` を取得する
 
-### Setting .env.local
+### step 3. Setting .env.local
 
 プロジェクトルートに .env.local を作成する
 
@@ -35,7 +35,7 @@ NEWT_SPACE_UID=your_space_uid
 NEWT_CDN_API_TOKEN=XXX_YOUR_TOKEN
 ```
 
-### Start
+### step 4. Start!
 
 ```
 yarn install
