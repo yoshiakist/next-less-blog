@@ -50,10 +50,9 @@ Vercel 上にデプロイする場合、参考資料として以下のリンク�
 
 ## Trouble Shooting
 
-### エディタ上で、import したライブラリについて module not found が出る
-
-以下の記事を参照してみてください。
-[【TypeScript】yarn4 + VSCodeでts2307が一生出続ける問題の解消法](https://qiita.com/Enokisan/items/8007c6a943058bcf7073)
+- Q: エディタ上で、import したライブラリについて module not found が出る
+  - A: 以下の記事を参照してみてください。
+  - [【TypeScript】yarn4 + VSCodeでts2307が一生出続ける問題の解消法](https://qiita.com/Enokisan/items/8007c6a943058bcf7073)
 
 
 ## Contribute
