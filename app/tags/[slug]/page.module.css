@@ -1,0 +1,15 @@
+.tag_list__title {
+  & > h2 {
+    line-height: 1.5;
+    white-space: normal;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .tag_list__title_none {
+    & > h2 {
+      font-size: 1rem;
+    }
+  }
+}

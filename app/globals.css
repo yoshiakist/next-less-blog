@@ -1,0 +1,100 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* reset */
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}
+
+
+/* variables */
+:root {
+  --main-text-color: #021A12;
+  --sub-text-color: #313a37;
+  --main-bg-color: #FDFAF5;
+  --blockquote-bg-color: #DCD9D0;
+  --gothic-font-family:  "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  letter-spacing: 0.08rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text-color)
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  text-wrap: initial;
+  letter-spacing: 0.12rem;
+  line-height: 1.4;
+}
+
+p {
+  margin: 1.5rem 0 0.8rem;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+ul {
+  margin: 2rem 0 2rem;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+ul > li {
+  margin: 0.5rem 0 0.5rem;
+}
+
+ruby > rt {
+  transform: translate(0, 1px);
+}
+
+.container {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 100px 0 160px;
+}
+
+.home .article__nav {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .header {
+    margin: 80px 0 140px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    margin: 50px 0 100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 15px;
+  }
+}

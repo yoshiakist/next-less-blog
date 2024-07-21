@@ -1,0 +1,32 @@
+.article__nav {
+  padding: 2rem 0 0;
+
+  & > ul {
+    margin: 0;
+    padding: 1rem 0 1rem;
+
+    & > li {
+      display: flex;
+      margin: 0 0 1rem;
+
+      & > a > time {
+        min-width: 90px;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .article__nav {
+    & > ul {
+      & > li {
+        margin-bottom: 1.3rem;
+
+        & > a {
+          display: block;
+        }
+      }
+    }
+  }
+}
