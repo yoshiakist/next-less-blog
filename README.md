@@ -28,7 +28,9 @@ yossi が自分のブログ開発のために利用しています。
 
 プロジェクトルートに .env.local を作成する
 
-``` .env.local
+``` 
+# .env.local
+
 NEWT_SPACE_UID=your_space_uid
 NEWT_CDN_API_TOKEN=XXX_YOUR_TOKEN
 ```
