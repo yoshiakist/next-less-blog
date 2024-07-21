@@ -1,16 +1,12 @@
 import { getApp } from '@/lib/newt'
-import { Shippori_Mincho, Baskervville } from "next/font/google";
+import { Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/footer"
-import Link from 'next/link'
+import { Header } from "../components/header"
 
 const shipporiMincho = Shippori_Mincho({
   subsets: ['latin'],
   weight: "500"
-});
-const baskervville = Baskervville({
-  subsets: ['latin'],
-  weight: "400"
 });
 
 export default async function RootLayout({
@@ -23,15 +19,7 @@ export default async function RootLayout({
   return (
     <html lang="ja">
       <body className={shipporiMincho.className}>
-        <header
-          className={`${baskervville.className} header`}
-        >
-          <div className="container">
-            <h1 style={styles.siteName}>
-              <Link href={'/'}>{app.name}</Link>
-            </h1>
-          </div>
-        </header>
+        <Header appName={app.name} />
         <main>
           <div className="container">
             {children}
@@ -42,14 +30,3 @@ export default async function RootLayout({
     </html>
   );
 }
-
-const styles: {[key: string]: React.CSSProperties} = {
-  siteName: {
-    fontSize: '1rem',
-    letterSpacing: '0.15em',
-  },
-  body: {
-    background: '#ddd',
-    flex: 1,
-  }
-};
