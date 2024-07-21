@@ -13,8 +13,8 @@ yossi が自分のブログ開発のために利用しています。
 ### Environment
 
 - node: v22.3.0
-- npm: 10.8.1
-- yarn: 3.8.3
+- npm: v10.8.1
+- yarn: v3.8.3
 
 ※ JavaScript パッケージマネージャの Volta をインストールしてある場合は自動で設定されます
 
