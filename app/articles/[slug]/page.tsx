@@ -34,6 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article?.title} | ${app.name}`,
     description: article?.meta.description || 'meta description を設定し忘れるときだってあるさ',
+    openGraph: {
+      images: [`/ogp/${slug}.png`],
+    },
   }
 }
 
