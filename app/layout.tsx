@@ -1,4 +1,4 @@
-import { getApp } from '@/lib/newt'
+import { getApp, getTags } from '@/lib/switcher'
 import { Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/footer"
@@ -15,6 +15,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const app = await getApp()
+  const tags = await getTags()
 
   return (
     <html lang="ja">
@@ -25,7 +26,7 @@ export default async function RootLayout({
             {children}
           </div>
         </main>
-        <Footer/>
+        <Footer tags={tags}/>
       </body>
     </html>
   );

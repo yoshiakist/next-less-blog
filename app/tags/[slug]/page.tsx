@@ -1,4 +1,4 @@
-import { getApp, getArticlesByTagId, getTagBySlug } from '@/lib/newt'
+import { getApp, getArticlesByTagId, getTagBySlug } from '@/lib/switcher'
 import { ArticleList } from '@/components/articleList'
 import type { Metadata } from 'next'
 import styles from './page.module.css'

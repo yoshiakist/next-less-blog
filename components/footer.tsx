@@ -1,10 +1,12 @@
 import Link from 'next/link'
-import { getTags } from '@/lib/newt'
 import styles from './footer.module.css';
+import { Tag } from '@/types/tag';
 
-export const Footer = async () => {
-  const tags = await getTags()
+type Props = {
+  tags: Tag[];
+};
 
+export const Footer = ({tags} : Props) => {
   return (
     <footer className={styles.footer}>
       <div className="container">
