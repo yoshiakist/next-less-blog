@@ -10,7 +10,7 @@ const client = createClient({
   apiType: 'cdn',
 })
 
-export const getApp = cache(
+const getApp = cache(
   async () => {
     const app = await client.getApp({
       appUid: 'blog',
@@ -19,7 +19,7 @@ export const getApp = cache(
   }
 );
 
-export const getArticles = cache(
+const getArticles = cache(
   async () => {
     const { items } = await client.getContents<Article>({
       appUid: 'blog',
@@ -32,7 +32,7 @@ export const getArticles = cache(
   }
 );
 
-export const getArticleBySlug = cache(async (slug: string) => {
+const getArticleBySlug = cache(async (slug: string) => {
   const article = await client.getFirstContent<Article>({
     appUid: 'blog',
     modelUid: 'article',
@@ -44,7 +44,7 @@ export const getArticleBySlug = cache(async (slug: string) => {
   return article
 })
 
-export const getTagBySlug = cache(async (slug: string) => {
+const getTagBySlug = cache(async (slug: string) => {
   const tag = await client.getFirstContent<Tag>({
     appUid: 'blog',
     modelUid: 'tag',
@@ -56,7 +56,7 @@ export const getTagBySlug = cache(async (slug: string) => {
   return tag 
 })
 
-export const getArticlesByTagId = cache(async (tagId: string) => {
+const getArticlesByTagId = cache(async (tagId: string) => {
   const { items } = await client.getContents<Article>({
     appUid: 'blog',
     modelUid: 'article',
@@ -71,7 +71,7 @@ export const getArticlesByTagId = cache(async (tagId: string) => {
   return items
 })
 
-export const getPast3Articles = cache(
+const getPast3Articles = cache(
   async (article: Article) => {
     const { items } = await client.getContents<Article>({
       appUid: 'blog',
@@ -88,7 +88,7 @@ export const getPast3Articles = cache(
   }
 );
 
-export const getTags = cache(
+const getTags = cache(
   async () => {
     const { items } = await client.getContents<Tag>({
       appUid: 'blog',
@@ -101,3 +101,13 @@ export const getTags = cache(
     return items
   }
 );
+
+export default {
+  getApp,
+  getArticles,
+  getArticleBySlug,
+  getTagBySlug,
+  getArticlesByTagId,
+  getPast3Articles,
+  getTags,
+}

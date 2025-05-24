@@ -1,4 +1,4 @@
-import { getApp, getArticles } from '@/lib/newt'
+import { getApp, getArticles } from '@/lib/switcher'
 import { ArticleList } from '@/components/articleList'
 import type { Metadata } from 'next'
 
