@@ -8,9 +8,9 @@ switch (CMS_NAME) {
   case 'newt':
     cms = newt
     break
-  // case 'microcms':
-  //   cms = require('./microcms').default
-  //   break
+  case 'microcms':
+    cms = require('./microcms').default
+    break
   default:
     throw new Error(`未対応のCMSです: ${CMS_NAME}`)
 }
