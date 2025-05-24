@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.3.0"],\
             ["eslint", "npm:8.57.0"],\
             ["eslint-config-next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
+            ["microcms-js-sdk", "npm:3.2.0"],\
             ["newt-client-js", "npm:3.3.3"],\
             ["next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
             ["postcss", "npm:8.4.39"],\
@@ -1055,6 +1056,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ast-types-flow-npm-0.0.8-d5c457c18e-0a64706609.zip/node_modules/ast-types-flow/",\
           "packageDependencies": [\
             ["ast-types-flow", "npm:0.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["async-retry", [\
+        ["npm:1.3.3", {\
+          "packageLocation": "./.yarn/cache/async-retry-npm-1.3.3-bc90c5cee0-38a7152ff7.zip/node_modules/async-retry/",\
+          "packageDependencies": [\
+            ["async-retry", "npm:1.3.3"],\
+            ["retry", "npm:0.13.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3522,6 +3533,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["microcms-js-sdk", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/microcms-js-sdk-npm-3.2.0-9d06564f51-c0cf6325f0.zip/node_modules/microcms-js-sdk/",\
+          "packageDependencies": [\
+            ["microcms-js-sdk", "npm:3.2.0"],\
+            ["async-retry", "npm:1.3.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["micromatch", [\
         ["npm:4.0.7", {\
           "packageLocation": "./.yarn/cache/micromatch-npm-4.0.7-28fb7387ee-3cde047d70.zip/node_modules/micromatch/",\
@@ -3815,6 +3836,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.3.0"],\
             ["eslint", "npm:8.57.0"],\
             ["eslint-config-next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
+            ["microcms-js-sdk", "npm:3.2.0"],\
             ["newt-client-js", "npm:3.3.3"],\
             ["next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
             ["postcss", "npm:8.4.39"],\
@@ -4536,6 +4558,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/retry-npm-0.12.0-72ac7fb4cc-623bd7d2e5.zip/node_modules/retry/",\
           "packageDependencies": [\
             ["retry", "npm:0.12.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.13.1", {\
+          "packageLocation": "./.yarn/cache/retry-npm-0.13.1-89eb100ab6-47c4d5be67.zip/node_modules/retry/",\
+          "packageDependencies": [\
+            ["retry", "npm:0.13.1"]\
           ],\
           "linkType": "HARD"\
         }]\
