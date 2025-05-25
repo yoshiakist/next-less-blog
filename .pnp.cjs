@@ -1260,10 +1260,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["caniuse-lite", [\
-        ["npm:1.0.30001642", {\
-          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001642-794b0b6b47-23f823ec11.zip/node_modules/caniuse-lite/",\
+        ["npm:1.0.30001718", {\
+          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001718-7a8c69d014-c6598b6eb2.zip/node_modules/caniuse-lite/",\
           "packageDependencies": [\
-            ["caniuse-lite", "npm:1.0.30001642"]\
+            ["caniuse-lite", "npm:1.0.30001718"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3803,7 +3803,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.3.0"],\
             ["@types/sass", null],\
             ["busboy", "npm:1.6.0"],\
-            ["caniuse-lite", "npm:1.0.30001642"],\
+            ["caniuse-lite", "npm:1.0.30001718"],\
             ["graceful-fs", "npm:4.2.11"],\
             ["postcss", "npm:8.4.31"],\
             ["react", "npm:18.3.1"],\
