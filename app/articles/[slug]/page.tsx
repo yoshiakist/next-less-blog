@@ -6,6 +6,7 @@ import { ArticleList } from '@/components/articleList'
 import { writeOgpImage } from '@/lib/generateOgpImage'
 import Link from 'next/link'
 import styles from './page.module.css'
+import { Tag } from '@/types/tag'
 
 type Props = {
   params: {
@@ -20,7 +21,7 @@ export async function generateStaticParams() {
     await writeOgpImage(article.title, article.sys.createdAt, article.slug);
   }
 
-  return articles.map((article) => ({
+  return articles.map((article: Article) => ({
     slug: article.slug,
   }))
 }
@@ -59,7 +60,7 @@ export default async function Article({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: article.body }} />
         <footer className={styles.article__footer}>
           <ul>
-            {article.tags.map((tag) => {
+            {article.tags.map((tag: Tag) => {
               return (
                 <li key={tag.id}>
                   <Link href={`/tags/${tag.slug}`}>{tag.name}</Link>

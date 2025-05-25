@@ -12,7 +12,7 @@ export const ArticleList = ({ articles }: Props) => {
     <>
       <nav className={styles.article__nav}>
         <ul>
-          {articles.map((article) => {
+          {articles.map((article: Article) => {
             return (
               <li key={article.id}>
                 <Link href={`/articles/${article.slug}`}>
