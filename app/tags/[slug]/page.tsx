@@ -25,7 +25,7 @@ export default async function TagList({ params }: Props) {
   const tag = await getTagBySlug(slug);
   if (!tag) return
 
-  const articles = await getArticlesByTagId(tag._id)
+  const articles = await getArticlesByTagId(tag.id)
   if (!articles) return
 
   if (articles.length > 0) {

@@ -14,9 +14,9 @@ export const ArticleList = ({ articles }: Props) => {
         <ul>
           {articles.map((article) => {
             return (
-              <li key={article._id}>
+              <li key={article.id}>
                 <Link href={`/articles/${article.slug}`}>
-                  <ArticleDate datetime={article._sys.createdAt} />
+                  <ArticleDate datetime={article.sys.createdAt} />
                   <span>{article.title}</span>
                 </Link>
               </li>

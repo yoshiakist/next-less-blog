@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   const articles = await getArticles()
 
   for (const article of articles) {
-    await writeOgpImage(article.title, article._sys.createdAt, article.slug);
+    await writeOgpImage(article.title, article.sys.createdAt, article.slug);
   }
 
   return articles.map((article) => ({
@@ -52,7 +52,7 @@ export default async function Article({ params }: Props) {
       <article>
         <header className={styles.article__header}>
           <h1 className={styles.article__title}>{article.title}</h1>
-          <ArticleDate datetime={article._sys.createdAt} />
+          <ArticleDate datetime={article.sys.createdAt} />
         </header>
         <div
           className={styles.article__content}
@@ -61,7 +61,7 @@ export default async function Article({ params }: Props) {
           <ul>
             {article.tags.map((tag) => {
               return (
-                <li key={tag._id}>
+                <li key={tag.id}>
                   <Link href={`/tags/${tag.slug}`}>{tag.name}</Link>
                 </li>
               )

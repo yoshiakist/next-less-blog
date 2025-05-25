@@ -26,9 +26,8 @@ const getApp = cache(async () => {
 const getArticles = cache(async () => {
   const data = await fetcher(`articles?limit=${NUMBER_OF_ARTICLE_LIST}`)
   return data.contents.map((item: any) => ({
-    _id: item.id,
-    _sys: {
-      // インポートした過去記事を表示するため、createdAtをpublishedAtに変更
+    id: item.id,
+    sys: {
       createdAt: item.publishedAt,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
@@ -48,9 +47,8 @@ const getArticles = cache(async () => {
 const getTags = cache(async () => {
   const data = await fetcher(`tags?limit=${NUMBER_OF_ARTICLE_LIST}`)
   return data.contents.map((item: any) => ({
-    _id: item.id,
-    _sys: {
-      // インポートした過去記事を表示するため、createdAtをpublishedAtに変更
+    id: item.id,
+    sys: {
       createdAt: item.publishedAt,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
@@ -66,9 +64,8 @@ const getArticleBySlug = cache(async (slug: string) => {
   const item = data.contents[0]
   if (!item) return null
   return {
-    _id: item.id,
-    _sys: {
-      // インポートした過去記事を表示するため、createdAtをpublishedAtに変更
+    id: item.id,
+    sys: {
       createdAt: item.publishedAt,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
@@ -91,8 +88,8 @@ const getTagBySlug = cache(async (slug: string) => {
   const item = data.contents[0]
   if (!item) return null
   return {
-    _id: item.id,
-    _sys: {
+    id: item.id,
+    sys: {
       createdAt: item.publishedAt,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
@@ -106,8 +103,8 @@ const getTagBySlug = cache(async (slug: string) => {
 const getArticlesByTagId = cache(async (tagId: string) => {
   const data = await fetcher(`articles?filters=tags[contains]${tagId}&limit=${NUMBER_OF_ARTICLE_LIST}&orders=-publishedAt`)
   return data.contents.map((item: any) => ({
-    _id: item.id,
-    _sys: {
+    id: item.id,
+    sys: {
       createdAt: item.publishedAt,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
@@ -119,10 +116,10 @@ const getArticlesByTagId = cache(async (tagId: string) => {
 })
 
 const getPast3Articles = cache(async (article: any) => {
-  const data = await fetcher(`articles?filters=publishedAt[less_than]${article._sys.createdAt}&limit=3&orders=-publishedAt`)
+  const data = await fetcher(`articles?filters=publishedAt[less_than]${article.sys.createdAt}&limit=3&orders=-publishedAt`)
   return data.contents.map((item: any) => ({
-    _id: item.id,
-    _sys: {
+    id: item.id,
+    sys: {
       createdAt: item.publishedAt,
       updatedAt: item.updatedAt,
       publishedAt: item.publishedAt,
