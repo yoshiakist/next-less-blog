@@ -1,15 +1,20 @@
-import newt from './newt'
+import mock from './services/mock'
+import newt from './services/newt'
+import microcms from './services/microcms'
 
-const CMS_NAME = process.env.CMS_NAME || 'newt'
+const CMS_NAME = process.env.CMS_NAME || 'mock'
 
-let cms: typeof newt
+let cms: typeof mock | typeof newt | typeof microcms
 
 switch (CMS_NAME) {
+  case 'mock':
+    cms = mock
+    break
   case 'newt':
     cms = newt
     break
   case 'microcms':
-    cms = require('./microcms').default
+    cms = microcms
     break
   default:
     throw new Error(`未対応のCMSです: ${CMS_NAME}`)

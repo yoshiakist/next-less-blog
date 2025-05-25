@@ -1,4 +1,4 @@
-import { getApp, getArticles, getArticleBySlug, getPast3Articles } from '@/lib/switcher'
+import { getApp, getArticles, getArticleBySlug, getPast3Articles } from '@/lib/serviceSwitcher'
 import type { Metadata } from 'next'
 import type { Article } from '@/types/article'
 import { ArticleDate } from "@/components/articleDate"
@@ -6,6 +6,7 @@ import { ArticleList } from '@/components/articleList'
 import { writeOgpImage } from '@/lib/generateOgpImage'
 import Link from 'next/link'
 import styles from './page.module.css'
+import { Tag } from '@/types/tag'
 
 type Props = {
   params: {
@@ -17,10 +18,10 @@ export async function generateStaticParams() {
   const articles = await getArticles()
 
   for (const article of articles) {
-    await writeOgpImage(article.title, article._sys.createdAt, article.slug);
+    await writeOgpImage(article.title, article.sys.createdAt, article.slug);
   }
 
-  return articles.map((article) => ({
+  return articles.map((article: Article) => ({
     slug: article.slug,
   }))
 }
@@ -52,16 +53,16 @@ export default async function Article({ params }: Props) {
       <article>
         <header className={styles.article__header}>
           <h1 className={styles.article__title}>{article.title}</h1>
-          <ArticleDate datetime={article._sys.createdAt} />
+          <ArticleDate datetime={article.sys.createdAt} />
         </header>
         <div
           className={styles.article__content}
           dangerouslySetInnerHTML={{ __html: article.body }} />
         <footer className={styles.article__footer}>
           <ul>
-            {article.tags.map((tag) => {
+            {article.tags.map((tag: Tag) => {
               return (
-                <li key={tag._id}>
+                <li key={tag.id}>
                   <Link href={`/tags/${tag.slug}`}>{tag.name}</Link>
                 </li>
               )

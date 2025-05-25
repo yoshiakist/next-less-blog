@@ -63,8 +63,10 @@ yossi が自分のブログ開発のために利用しています。
 ``` 
 # .env.local
 
-NEWT_SPACE_UID=your_space_uid
-NEWT_CDN_API_TOKEN=XXX_YOUR_TOKEN
+CMS_NAME=microcms
+
+MICROCMS_SERVICE_DOMAIN=your_service_domain
+MICROCMS_API_KEY=your_api_key
 ```
 
 ### step 4. Start!
@@ -78,9 +80,7 @@ yarn dev
 
 Vercel 上にデプロイする場合、参考資料として以下のリンクもオススメです
 
-- [NewtとNext.js (App Router) を利用してブログを作成する](https://www.newt.so/docs/tutorials/get-contents-in-nextjs)
-- [コンテンツの更新時にVercelでデプロイを行う](https://www.newt.so/docs/tutorials/deploy-to-vercel-with-webhooks)
-
+- [microCMS + Next.jsでJamstackブログを作ってみよう](https://blog.microcms.io/microcms-next-jamstack-blog/)
 
 ## Trouble Shooting
 

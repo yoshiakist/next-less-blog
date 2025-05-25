@@ -1,4 +1,4 @@
-import { getApp, getArticles } from '@/lib/switcher'
+import { getApp, getArticles } from '@/lib/serviceSwitcher'
 import { ArticleList } from '@/components/articleList'
 import type { Metadata } from 'next'
 

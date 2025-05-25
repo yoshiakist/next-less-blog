@@ -1,8 +1,8 @@
 import type { Sys } from '@/types/sys'
 
 export interface Tag {
-  _id: string
-  _sys: Sys
+  id: string
+  sys: Sys
   name: string
   slug: string
 }

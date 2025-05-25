@@ -15,7 +15,7 @@ export const Footer = ({tags} : Props) => {
           <ul>
             {tags.map((tag) => {
               return (
-                <li key={tag._id}>
+                <li key={tag.id}>
                   <Link href={`/tags/${tag.slug}`}>{tag.name}</Link>
                 </li>
               )
