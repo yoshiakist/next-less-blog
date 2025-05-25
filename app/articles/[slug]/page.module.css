@@ -1,7 +1,7 @@
 .article__header {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   margin: 0 0 3.5rem;
 }
 
