@@ -1,4 +1,4 @@
-import newt from './newt'
+import newt from './services/newt'
 
 const CMS_NAME = process.env.CMS_NAME || 'newt'
 
@@ -9,7 +9,7 @@ switch (CMS_NAME) {
     cms = newt
     break
   case 'microcms':
-    cms = require('./microcms').default
+    cms = require('./services/microcms').default
     break
   default:
     throw new Error(`未対応のCMSです: ${CMS_NAME}`)

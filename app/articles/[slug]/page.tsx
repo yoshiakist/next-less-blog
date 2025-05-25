@@ -1,4 +1,4 @@
-import { getApp, getArticles, getArticleBySlug, getPast3Articles } from '@/lib/switcher'
+import { getApp, getArticles, getArticleBySlug, getPast3Articles } from '@/lib/serviceSwitcher'
 import type { Metadata } from 'next'
 import type { Article } from '@/types/article'
 import { ArticleDate } from "@/components/articleDate"

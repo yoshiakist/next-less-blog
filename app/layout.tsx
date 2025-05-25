@@ -1,4 +1,4 @@
-import { getApp, getTags } from '@/lib/switcher'
+import { getApp, getTags } from '@/lib/serviceSwitcher'
 import { Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/footer"
