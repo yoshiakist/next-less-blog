@@ -18,13 +18,14 @@ const fetcher = async (endpoint: string) => {
 
 const getApp = cache(async () => {
   return {
+    uid: 'microcms-app',
     name: `${SERVICE_DOMAIN}`,
     description: `${SERVICE_DOMAIN}のブログ`,
   }
 })
 
 const getArticles = cache(async () => {
-  const data = await fetcher(`articles?limit=${NUMBER_OF_ARTICLE_LIST}`)
+  const data = await fetcher(`articles?limit=${NUMBER_OF_ARTICLE_LIST}&orders=-publishedAt`)
   return data.contents.map((item: any) => ({
     id: item.id,
     sys: {
