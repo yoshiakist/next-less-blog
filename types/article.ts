@@ -7,6 +7,7 @@ export interface Article {
   title: string
   slug: string
   body: string
+  bodyMd: string
   tags: Tag[]
   meta: {
     description: string
