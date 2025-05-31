@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "marked": "^15.0.12",
     "microcms-js-sdk": "^3.2.0",
     "newt-client-js": "^3.3.2",
     "next": "14.2.4",

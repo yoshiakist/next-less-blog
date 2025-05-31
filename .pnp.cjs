@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.3.0"],\
             ["eslint", "npm:8.57.0"],\
             ["eslint-config-next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
+            ["marked", "npm:15.0.12"],\
             ["microcms-js-sdk", "npm:3.2.0"],\
             ["newt-client-js", "npm:3.3.3"],\
             ["next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
@@ -3524,6 +3525,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["marked", [\
+        ["npm:15.0.12", {\
+          "packageLocation": "./.yarn/cache/marked-npm-15.0.12-878d4bfa62-2ac72fc0bc.zip/node_modules/marked/",\
+          "packageDependencies": [\
+            ["marked", "npm:15.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["merge2", [\
         ["npm:1.4.1", {\
           "packageLocation": "./.yarn/cache/merge2-npm-1.4.1-a2507bd06c-7268db63ed.zip/node_modules/merge2/",\
@@ -3836,6 +3846,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:18.3.0"],\
             ["eslint", "npm:8.57.0"],\
             ["eslint-config-next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
+            ["marked", "npm:15.0.12"],\
             ["microcms-js-sdk", "npm:3.2.0"],\
             ["newt-client-js", "npm:3.3.3"],\
             ["next", "virtual:e187a70b6b608a53958380344787fafbf08bf7f1c614b5b763850904c72951305ea59546f0757b72a97c00906e9e40cbc01eccc881d17c55b64b566cfe6f4e66#npm:14.2.4"],\
