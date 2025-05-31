@@ -68,7 +68,7 @@ export const MOCK_ARTICLES: Article[] = [
     sys: createSys('2024-04-03T10:00:00Z', 2),
     title: '見出しとリスト',
     slug: 'mock-article-heading-list',
-    body: '<h2>セクションタイトル</h2><p>説明文</p><h3>小見出し</h3><ul><li>リスト1</li><li>リスト2</li></ul>',
+    body: '<h2>セクションタイトル</h2><p>説明文</p><h3>小見出し</h3><ul><li>リスト1<ul><li>リスト1-1</li><li>リスト1-2</li></ul></li><li>リスト2</li></ul>',
     tags: [MOCK_TAGS[1]],
     meta: { description: 'h2, h3, ul, liを含むエントリ' },
   },
