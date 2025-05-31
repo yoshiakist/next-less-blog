@@ -35,6 +35,14 @@
     margin-left: 1rem;
     list-style: inherit;
     padding-inline-start: 1rem;
+
+    & > li {
+      & > ul {
+        margin: 0.6rem 0 0.8rem 1.5rem;
+        list-style-type: square;
+        font-size: 0.9rem;
+      }
+    }
   }
 
   & > hr {
@@ -68,6 +76,13 @@
       margin-top: 0;
       font-family: var(--gothic-font-family);
     }
+  }
+
+  & code {
+    background: var(--blockquote-bg-color);
+    display: inline-block;
+    border-radius: 0.2rem;
+    padding: 0 0.2rem;
   }
 }
 
