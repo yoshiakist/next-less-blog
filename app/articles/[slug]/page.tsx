@@ -7,6 +7,7 @@ import { writeOgpImage } from '@/lib/generateOgpImage'
 import Link from 'next/link'
 import styles from './page.module.css'
 import { Tag } from '@/types/tag'
+import { marked } from 'marked'
 
 type Props = {
   params: {
@@ -48,6 +49,9 @@ export default async function Article({ params }: Props) {
 
   const past3Articles = await getPast3Articles(article)
 
+  const bodyMd = article.bodyMd
+  const html = bodyMd ? marked(bodyMd) : article.body
+
   return (
     <>
       <article>
@@ -57,7 +61,7 @@ export default async function Article({ params }: Props) {
         </header>
         <div
           className={styles.article__content}
-          dangerouslySetInnerHTML={{ __html: article.body }} />
+          dangerouslySetInnerHTML={{ __html: html }} />
         <footer className={styles.article__footer}>
           <ul>
             {article.tags.map((tag: Tag) => {

@@ -34,6 +34,7 @@ const getArticles = cache(
       title: item.title,
       slug: item.slug,
       body: item.body,
+      bodyMd: item.bodyMd || '',
       meta: item.meta,
       tags: item.tags,
     }))
@@ -56,6 +57,7 @@ const getArticleBySlug = cache(async (slug: string) => {
     title: article.title,
     slug: article.slug,
     body: article.body,
+    bodyMd: article.bodyMd || '',
     tags: article.tags,
     meta: article.meta,
   }
@@ -97,6 +99,7 @@ const getArticlesByTagId = cache(async (tagId: string) => {
     title: item.title,
     slug: item.slug,
     body: item.body,
+    bodyMd: item.bodyMd || '',
     tags: item.tags,
     meta: item.meta,
   }))
@@ -121,6 +124,7 @@ const getPast3Articles = cache(
       title: item.title,
       slug: item.slug,
       body: item.body,
+      bodyMd: item.bodyMd || '',
       tags: item.tags,
       meta: item.meta,
     })).slice(0,3)
