@@ -100,7 +100,7 @@ export const MOCK_ARTICLES: Article[] = [
     title: 'マークダウンによる記述',
     slug: 'mock-article-markdown-body',
     body: '<p>他の記事はこちら: <a href="/articles/mock-article-simple-entry">シンプルなエントリ</a></p>',
-    bodyMd: '# セクションタイトル\n説明文\n## リスト\n- リスト1\n- リスト2\n## リンク\n[リンクテキスト](./mock-article-link-to-others)',
+    bodyMd: '# セクションタイトル\n説明文\n改行が反映される\n## リスト\n- リスト1\n- リスト2\n## リンク\n[リンクテキスト](./mock-article-link-to-others)',
     tags: [MOCK_TAGS[0], MOCK_TAGS[1]],
     meta: { description: '他の記事へのリンクを含むエントリ' },
   },
