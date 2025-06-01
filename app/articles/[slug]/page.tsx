@@ -49,6 +49,7 @@ export default async function Article({ params }: Props) {
 
   const past3Articles = await getPast3Articles(article)
 
+  marked.setOptions({breaks: true});
   const bodyMd = article.bodyMd
   const html = bodyMd ? marked(bodyMd) : article.body
 
