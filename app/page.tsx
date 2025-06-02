@@ -1,20 +1,20 @@
-import { getApp, getArticles } from '@/lib/serviceSwitcher'
-import { ArticleList } from '@/components/articleList'
-import type { Metadata } from 'next'
+import { ArticleList } from "@/components/articleList";
+import { getApp, getArticles } from "@/lib/serviceSwitcher";
+import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const app = await getApp()
-  return {
-    title: app.name,
-    description: `${app.name}のブログ`,
-  }
+	const app = await getApp();
+	return {
+		title: app.name,
+		description: `${app.name}のブログ`,
+	};
 }
 
 export default async function Home() {
-  const articles = await getArticles()
-  return (
-    <main className='home'>
-      <ArticleList articles={articles} />
-    </main>
-  )
+	const articles = await getArticles();
+	return (
+		<main className="home">
+			<ArticleList articles={articles} />
+		</main>
+	);
 }
