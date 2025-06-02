@@ -54,7 +54,7 @@ export default async function Article({ params }: Props) {
 	const article = await getArticleBySlug(slug);
 	if (!article) return;
 
-	const past3Articles = await getPast3Articles(article);
+	const past3Articles = await getPast3Articles(article.sys.createdAt);
 
 	marked.setOptions({ breaks: true });
 	const bodyMd = article.bodyMd;

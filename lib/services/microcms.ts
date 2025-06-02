@@ -1,9 +1,32 @@
+import type { Article } from "@/types/article";
 import { cache } from "react";
 
 const API_KEY = process.env.MICROCMS_API_KEY ?? "";
 const SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
-
 const NUMBER_OF_ARTICLE_LIST = 100;
+
+type MicrocmsArticle = {
+	id: string;
+	publishedAt: string;
+	updatedAt: string;
+	revisedAt: string;
+	title: string;
+	slug: string;
+	description: string;
+	author: string;
+	content: string;
+	contentMd?: string;
+	tags: MicrocmsTag[];
+};
+
+type MicrocmsTag = {
+	id: string;
+	name: string;
+	slug: string;
+	publishedAt: string;
+	updatedAt: string;
+	revisedAt: string;
+};
 
 const fetcher = async (endpoint: string) => {
 	const res = await fetch(
@@ -31,7 +54,7 @@ const getArticles = cache(async () => {
 	const data = await fetcher(
 		`articles?limit=${NUMBER_OF_ARTICLE_LIST}&orders=-publishedAt`,
 	);
-	return data.contents.map((item: any) => ({
+	return data.contents.map((item: MicrocmsArticle) => ({
 		id: item.id,
 		sys: {
 			createdAt: item.publishedAt,
@@ -53,7 +76,7 @@ const getArticles = cache(async () => {
 
 const getTags = cache(async () => {
 	const data = await fetcher(`tags?limit=${NUMBER_OF_ARTICLE_LIST}`);
-	return data.contents.map((item: any) => ({
+	return data.contents.map((item: MicrocmsTag) => ({
 		id: item.id,
 		sys: {
 			createdAt: item.publishedAt,
@@ -112,7 +135,7 @@ const getArticlesByTagId = cache(async (tagId: string) => {
 	const data = await fetcher(
 		`articles?filters=tags[contains]${tagId}&limit=${NUMBER_OF_ARTICLE_LIST}&orders=-publishedAt`,
 	);
-	return data.contents.map((item: any) => ({
+	return data.contents.map((item: MicrocmsArticle) => ({
 		id: item.id,
 		sys: {
 			createdAt: item.publishedAt,
@@ -127,11 +150,11 @@ const getArticlesByTagId = cache(async (tagId: string) => {
 	}));
 });
 
-const getPast3Articles = cache(async (article: any) => {
+const getPast3Articles = cache(async (publishedAt: string) => {
 	const data = await fetcher(
-		`articles?filters=publishedAt[less_than]${article.sys.createdAt}&limit=3&orders=-publishedAt`,
+		`articles?filters=publishedAt[less_than]${publishedAt}&limit=3&orders=-publishedAt`,
 	);
-	return data.contents.map((item: any) => ({
+	return data.contents.map((item: MicrocmsArticle) => ({
 		id: item.id,
 		sys: {
 			createdAt: item.publishedAt,
