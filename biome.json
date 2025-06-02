@@ -7,7 +7,14 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"ignore": [
+			"**/*.cjs",
+			"**/*.mjs",
+			"**/*.d.ts",
+			".next/**",
+			".yarn/**",
+			"node_modules/**"
+		]
 	},
 	"formatter": {
 		"enabled": true,
