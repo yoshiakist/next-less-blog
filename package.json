@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "biome lint",
-		"lint:fix": "biome check --apply"
+		"lint:fix": "biome check --write"
 	},
 	"dependencies": {
 		"marked": "^15.0.12",
