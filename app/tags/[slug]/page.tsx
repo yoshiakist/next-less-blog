@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 	return {
 		title: `${tag?.name}の話 | ${app.name}`,
-		description: tag?.name + "の記事",
+		description: `${tag?.name}の記事`,
 	};
 }
 
@@ -39,16 +39,16 @@ export default async function TagList({ params }: Props) {
 				<ArticleList articles={articles} />
 			</div>
 		);
-	} else {
-		return (
-			<div
-				className={`
+	}
+
+	return (
+		<div
+			className={`
           ${styles.tag_list__title}
           ${styles.tag_list__title_none}
         `}
-			>
-				<h2>{tag.name}の話はそのうち書きます。</h2>
-			</div>
-		);
-	}
+		>
+			<h2>{tag.name}の話はそのうち書きます。</h2>
+		</div>
+	);
 }

@@ -1,7 +1,7 @@
 import { cache } from "react";
 
-const API_KEY = process.env.MICROCMS_API_KEY + "";
-const SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN + "";
+const API_KEY = process.env.MICROCMS_API_KEY ?? "";
+const SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
 
 const NUMBER_OF_ARTICLE_LIST = 100;
 

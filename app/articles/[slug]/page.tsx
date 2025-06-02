@@ -69,6 +69,7 @@ export default async function Article({ params }: Props) {
 				</header>
 				<div
 					className={styles.article__content}
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
 					dangerouslySetInnerHTML={{ __html: html }}
 				/>
 				<footer className={styles.article__footer}>
