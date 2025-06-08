@@ -3,6 +3,7 @@ import { Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
+import ThemeScript from "./theme-script";
 
 const shipporiMincho = Shippori_Mincho({
 	subsets: ["latin"],
@@ -24,6 +25,7 @@ export default async function RootLayout({
 	return (
 		<html lang="ja">
 			<body className={shipporiMincho.className}>
+				<ThemeScript />
 				<Header appName={app.name} />
 				<main>
 					<div className="container">{children}</div>
