@@ -32,6 +32,7 @@ ol[role="list"] {
 body {
 	min-height: 100vh;
 	line-height: 1.5;
+	transition: background-color 0.4s, color 0.4s;
 }
 h1,
 h2,
@@ -72,24 +73,31 @@ textarea:not([rows]) {
 
 /* variables */
 :root {
-	--main-text-color: #021a12;
-	--sub-text-color: #313a37;
-	--main-bg-color: #fdfaf5;
-	--blockquote-bg-color: #dcd9d0;
+	--primary-bg: #fdfaf5;
+	--primary-text: #021a12;
+	--secondary-bg: #dcd9d0;
+	--secondary-text: #313a37;
 	--gothic-font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
 		"Hiragino Sans", Meiryo, sans-serif;
 }
 
+[data-theme="dark"] {
+	--primary-bg: #0a0c15;
+	--primary-text: #fafaf5;
+	--secondary-bg: #23272a;
+	--secondary-text: #b5bac1;
+}
+
 body {
-	background-color: var(--main-bg-color);
-	color: var(--main-text-color);
+	background-color: var(--primary-bg);
+	color: var(--primary-text);
 	letter-spacing: 0.08rem;
 	line-height: 1.6;
 }
 
 a {
 	text-decoration: none;
-	color: var(--main-text-color);
+	color: var(--primary-text);
 }
 
 a:hover {
