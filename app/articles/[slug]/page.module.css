@@ -46,7 +46,8 @@
 	}
 
 	& > hr {
-		margin: 3rem 0 4rem;
+		margin: 3rem 0 0;
+		padding-bottom: 3rem;
 		border: none;
 		border-top: 1px solid var(--main-bg-color);
 		display: block;
