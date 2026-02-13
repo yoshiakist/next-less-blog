@@ -69,9 +69,18 @@
 	}
 
 	& > blockquote {
-		background: var(--blockquote-bg-color);
+		position: relative;
 		margin: 2rem 0 2rem;
 		padding: 1rem 1rem .2rem;
+		&::before {
+			content: "";
+			background: var(--blockquote-bg-color);
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 2px;
+			height: 100%;
+		}
 		& > p {
 			font-size: 0.8rem;
 			margin-top: 0;
@@ -81,9 +90,10 @@
 
 	& code {
 		background: var(--blockquote-bg-color);
-		display: inline-block;
+		display: block;
 		border-radius: 0.2rem;
-		padding: 0 0.2rem;
+		padding: 1rem 0.8rem;
+		text-wrap: auto;
 	}
 }
 
